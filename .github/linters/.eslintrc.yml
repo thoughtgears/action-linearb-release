@@ -11,8 +11,7 @@ globals:
 ignorePatterns:
   - '!.*'
   - '**/node_modules/.*'
-  - '**/dist/.*'
-  - '**/coverage/.*'
+  - '**/dist/*'
   - '*.json'
 
 parser: '@babel/eslint-parser'
