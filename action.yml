@@ -1,0 +1,28 @@
+name: 'LinearB release'
+description: 'Creates a production or custom release for LinearB'
+author: 'Thoughtgears'
+
+# Define your inputs here.
+inputs:
+  api_key:
+    description: 'LinearB API key'
+    required: true
+  repo_url:
+    description: 'Repository URL'
+    required: true
+  ref_name:
+    description: 'sha or tag name'
+    required: true
+  services:
+    description: 'Services to release, comma separate if multiple'
+    required: true
+  timestamp:
+    description: 'Timestamp of release, defaults to now'
+    required: false
+  stage:
+    description: 'Stage of the release, defaults to release'
+    required: false
+
+runs:
+  using: node20
+  main: dist/index.js
